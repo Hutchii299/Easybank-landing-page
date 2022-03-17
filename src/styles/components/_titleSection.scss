@@ -1,0 +1,82 @@
+.title-container {
+  padding-right: 20%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  // background-color: aqua;
+
+  @include respond(tab-land) {
+    grid-row: 2/3;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    transform: translateY(-12rem);
+    padding: 0 10rem;
+  }
+
+  @include respond(tab-port) {
+    transform: translateY(-10rem);
+    padding: 0 2.2rem;
+  }
+}
+
+.feature-image-container {
+  position: relative;
+
+  @include respond(tab-land) {
+    display: flex;
+    justify-content: center;
+
+    grid-row: 1/1;
+  }
+}
+
+.phone-image {
+  position: absolute;
+  top: -19%;
+  right: -54%;
+  width: 140%;
+
+  min-width: 55rem;
+
+  @include respond(large-tab) {
+    transform: translateY(5%);
+  }
+
+  @include respond(tab-land) {
+    position: relative;
+    transform: translateY(0);
+    top: -29%;
+    right: 0%;
+    width: 100%;
+    min-width: 0;
+    max-width: 70rem;
+  }
+
+  @include addPadding;
+}
+
+.background-feature-image {
+  position: absolute;
+  top: -37%;
+  right: -104%;
+  z-index: -1;
+  width: 220%;
+
+  min-width: 85rem;
+
+  @include respond(large-tab) {
+    transform: translateY(5%);
+  }
+
+  @include respond(tab-land) {
+    right: 0;
+    left: 0;
+    top: -18%;
+    min-width: 0;
+    height: 108%;
+    width: 100%;
+  }
+}

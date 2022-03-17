@@ -1,0 +1,22 @@
+//ABSTRACTS
+@import './abstracts/variables';
+@import './abstracts/functions';
+@import './abstracts/mixins';
+
+//BASE
+@import './base/base';
+@import './base/animations';
+@import './base/typography';
+@import './base/utilities';
+
+//LAYOUT
+@import './layout/layout';
+
+//COMPOENNTS
+@import './components/header';
+@import './components/titleSection';
+@import './components/choiceSection';
+@import './components/articleSection';
+@import './components/footer';
+@import './components/modal';
+@import './components/attribution';

@@ -1,0 +1,88 @@
+main {
+  overflow: hidden;
+  width: 100%;
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 16rem;
+  background-color: $color-white;
+  z-index: 10;
+
+  @include respond(tab-land) {
+    padding: 1.5rem 4rem;
+  }
+}
+
+.section {
+  padding: 0 16rem;
+
+  @include respond(tab-land) {
+    padding: 0;
+  }
+
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(34rem, 1fr));
+    align-content: center;
+
+    @include respond(tab-land) {
+      grid-template-columns: none;
+      grid-template-rows: repeat(2, min-content);
+    }
+  }
+
+  &-choice {
+    position: relative;
+    z-index: -2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: repeat(2, min-content);
+    gap: 2rem 0;
+    background-color: $color-grey-blue-vlight;
+
+    @include respond(tab-land) {
+      transform: translateY(-1rem);
+      justify-content: center;
+      text-align: center;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  &-articles {
+    @include respond(tab-land) {
+      justify-content: center;
+      // text-align: center;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  &-padding {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    @include respond(tab-land) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+}
+
+footer {
+  background-color: $color-dark-blue;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  align-content: center;
+  padding: 5rem 16rem;
+
+  @include respond(tab-land) {
+    padding: 3rem 4rem;
+  }
+}

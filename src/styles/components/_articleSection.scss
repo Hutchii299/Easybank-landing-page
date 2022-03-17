@@ -1,0 +1,15 @@
+.article {
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &__img {
+    height: 18rem;
+    width: 100%;
+  }
+
+  &__information {
+    padding: 3rem 2rem;
+  }
+}

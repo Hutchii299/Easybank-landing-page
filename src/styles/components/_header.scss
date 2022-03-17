@@ -1,0 +1,66 @@
+.navbar {
+  height: 100%;
+  align-self: center;
+
+  &__ul {
+    list-style: none;
+    display: flex;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      justify-items: center;
+      text-align: center;
+    }
+  }
+
+  &__li {
+    &:not(:last-child) {
+      margin-right: 2rem;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+    }
+
+    & a {
+      position: relative;
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: $color-grey-blue;
+
+      @include respond(tab-port) {
+        font-size: 2rem;
+        color: $color-dark-blue;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -2.8rem;
+        left: 0;
+        height: 0.4rem;
+        width: 0;
+        background-image: linear-gradient(
+          to right,
+          $color-lime-green,
+          $color-bright-cyan
+        );
+        transition: width 0.3s;
+
+        @include respond(tab-port) {
+          bottom: -0.8rem;
+        }
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.nav-btn {
+  border: none;
+  background-color: transparent;
+}
