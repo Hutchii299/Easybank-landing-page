@@ -1,9 +1,9 @@
 "use strict"
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
+// import 'core-js/stable';
+// import 'regenerator-runtime/runtime';
 
-import navBarView from '../views/navBarView';
-import modalView from '../views/modalView';
+import navBarView from '../views/navBarView.js';
+import modalView from '../views/modalView.js';
 
 const controllerModal = function () {
     modalView.toggleModal();

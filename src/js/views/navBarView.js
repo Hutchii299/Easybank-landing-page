@@ -1,5 +1,5 @@
-import closeImg from 'url:../../images/icon-close.svg';
-import hamburgerImg from 'url:../../images/icon-hamburger.svg';
+// const closeImg = './src/images/icon-close.svg';
+// const hamburgerImg = './src/images/icon-hamburger.svg';
 
 class NavBarComponent {
     _parentElement = document.querySelector('header');
@@ -18,10 +18,10 @@ class NavBarComponent {
 
     renderModalBtnImage() {
         if (this._navButton.querySelector('img').dataset.type === 'ham') {
-            this._navButton.querySelector('img').src = closeImg;
+            this._navButton.querySelector('img').src = './src/images/icon-close.svg';
             this._navButton.querySelector('img').dataset.type = 'close';
         } else {
-            this._navButton.querySelector('img').src = hamburgerImg;
+            this._navButton.querySelector('img').src = './src/images/icon-hamburger.svg';
             this._navButton.querySelector('img').dataset.type = 'ham';
         }
     }
