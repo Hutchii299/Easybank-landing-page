@@ -28,3 +28,4 @@ const init = function () {
     modalView.addHandlergradientClickedCloseModal(controllerGradientClick);
 }
 init();
+
